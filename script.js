@@ -1,3 +1,42 @@
+// --- LOGIN / LOGOUT HANDLER --- //
+document.addEventListener("DOMContentLoaded", () => {
+  const loginForm = document.getElementById("login-form");
+  const logoutButton = document.getElementById("logout-button");
+
+  // Login Page Logic
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const username = document.getElementById("username").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (username === "admin" && password === "12345") {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid login credentials. Try again!");
+      }
+    });
+  }
+
+  // Logout Logic
+  if (logoutButton) {
+    logoutButton.addEventListener("click", () => {
+      localStorage.removeItem("isLoggedIn");
+      window.location.href = "index.html";
+    });
+  }
+
+  // Redirect Check
+  if (window.location.pathname.includes("home.html")) {
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+      window.location.href = "index.html";
+    }
+  }
+});
+// --- END LOGIN HANDLER --- //
+
+// --- BOOK MANAGEMENT LOGIC --- //
 document.addEventListener("DOMContentLoaded", () => {
   const bookForm = document.getElementById("book-form");
   const submitBtn = document.getElementById("submit-btn");

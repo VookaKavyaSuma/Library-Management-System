@@ -1,5 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+/* ===== Login Page Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #fff;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.login-title span {
+  font-size: 3rem;
+  color: #f7971e;
+}
+
+#login-form {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 50px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form input {
+  width: 250px;
+  padding: 12px 16px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+#login-form input:focus {
+  background-color: #2e3967;
+}
+
+#login-form button {
+  margin-top: 15px;
+  width: 150px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  /* background: linear-gradient(45deg, #f7971e, #ffd200); */
+  color: #2a2a2a;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+#login-form button:hover {
+  transform: scale(1.05);
+  /* background: linear-gradient(45deg, #ffbb33, #fff176); */
+}
+
+.login-note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* ===== Logout button ===== */
+#logout-button {
+  background: #ff5252;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#logout-button:hover {
+  background: #e04848;
+  transform: scale(1.05);
+}
+
+/* ===== Main App Styles ===== */
 * {
   box-sizing: border-box;
   margin: 0;
