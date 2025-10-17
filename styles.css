@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  background: #1e1e2f; /* Dark background */
+  color: #e0e0e0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.container {
+  background: #27293d;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0,0,0,0.8);
+  padding: 40px 50px;
+}
+
+header h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.name-large {
+  font-size: 4rem;
+  color: #fe8c00; /* Vibrant orange */
+  font-weight: 800;
+  display: inline-block;
+  margin-right: 15px;
+  letter-spacing: 1.4px;
+  text-shadow: 1px 1px 5px rgba(254,140,0,0.7);
+}
+
+.text-small {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #c2c2d6;
+  vertical-align: bottom;
+  letter-spacing: 0.05em;
+}
+
+#search {
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  background: #3b3e5b;
+  color: #eee;
+  margin-bottom: 35px;
+  box-shadow: inset 4px 4px 8px #2e3050, inset -4px -4px 8px #464970;
+  transition: background 0.3s ease;
+}
+
+#search::placeholder {
+  color: #a0a0c0;
+}
+
+#search:focus {
+  outline: none;
+  background: #4a4d70;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #32354a;
+  border-radius: 14px;
+  box-shadow: inset 4px 4px 9px #292c44, inset -4px -4px 9px #3f4161;
+  color: #ffd54f;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  user-select: none;
+}
+
+.stats div {
+  flex: 1;
+  text-align: center;
+}
+
+.issue-section {
+  background-color: #3b3e5b;
+  padding: 20px 30px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+  box-shadow: inset 4px 4px 9px #292c44, inset -4px -4px 9px #3f4161;
+  color: #f5bb38;
+}
+
+.issue-section h3 {
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #fe8c00;
+  padding-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+#issue-select {
+  width: 70%;
+  padding: 12px 15px;
+  border-radius: 30px;
+  border: none;
+  font-size: 16px;
+  background-color: #27293d;
+  color: #eee;
+  box-shadow: inset 6px 6px 12px #211f34, inset -6px -6px 12px #373855;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+#issue-select option {
+  background-color: #27293d;
+  color: #eee;
+}
+
+#issue-form button {
+  background: linear-gradient(45deg, #fe8c00, #ffc107);
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2b2b2b;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#issue-form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 193, 7, 1);
+}
+
+form {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+form input[type="text"] {
+  flex: 1 1 260px;
+  padding: 16px 22px;
+  border-radius: 30px;
+  border: none;
+  background: #3b3e5b;
+  color: #eee;
+  font-weight: 500;
+  font-size: 17px;
+  box-shadow: inset 6px 6px 12px #2e3050,inset -6px -6px 12px #464970;
+  transition: background 0.3s ease;
+}
+
+form input[type="text"]::placeholder {
+  color: #a0a0c0;
+}
+
+form input[type="text"]:focus {
+  background: #4a4d70;
+  outline: none;
+}
+
+form input[type="number"] {
+  flex: 1 1 120px;
+  padding: 16px 22px;
+  border-radius: 30px;
+  border: none;
+  background: #3b3e5b;
+  color: #eee;
+  font-weight: 500;
+  font-size: 17px;
+  box-shadow: inset 6px 6px 12px #2e3050,inset -6px -6px 12px #464970;
+  transition: background 0.3s ease;
+}
+
+form input[type="number"]::placeholder {
+  color: #a0a0c0;
+}
+
+form input[type="number"]:focus {
+  background: #4a4d70;
+  outline: none;
+}
+
+form button {
+  background: linear-gradient(45deg, #f7971e, #ffd200);
+  border: none;
+  padding: 16px 36px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2b2b2b;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(255, 210, 0, 0.8);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(255, 210, 0, 1);
+}
+
+section h2 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #fe8c00;
+  padding-bottom: 8px;
+  letter-spacing: 1px;
+  color: #f5bb38;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+thead th {
+  color: #ffc107;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 18px 20px;
+  text-align: left;
+}
+
+tbody td {
+  background-color: #32354a;
+  padding: 15px 20px;
+  font-size: 15px;
+  border-radius: 12px;
+  box-shadow: inset 4px 4px 9px #292c44, inset -4px -4px 9px #3f4161;
+  color: #ddd;
+}
+
+button.action-btn {
+  background: #ff5252;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(255, 82, 82, 0.8);
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button.action-btn:hover {
+  background: #e04848;
+  transform: scale(1.05);
+}
+
+/* Edit button style */
+.edit-btn {
+  background: #4a90e2; /* Bright blue */
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(74, 144, 226, 0.8);
+  transition: background-color 0.3s, transform 0.2s;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-btn:hover {
+  background: #357abd;
+  transform: scale(1.05);
+}
+
+/* Cancel button style (in form) */
+#cancel-btn {
+  background-color: #e84118; /* Red */
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(232, 65, 24, 0.8);
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#cancel-btn:hover {
+  background-color: #c23616;
+  transform: scale(1.05);
+}
+
